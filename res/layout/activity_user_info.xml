@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/background_img_user_info_test"
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:layout_marginTop="-51dp"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_user_info_bj" />
+
+        <itstudio.instructor.widget.PullScrollView
+            android:id="@+id/user_info_scroll_view_test"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-230dp"
+            android:fillViewport="true"
+            app:headerHeight="300dp"
+            app:headerVisibleHeight="100dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/scroll_view_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:orientation="vertical" >
+
+                    <itstudio.instructor.widget.RoundedImageView
+                        android:id="@+id/roundedImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="80dip"
+                        android:maxWidth="80dip"
+                        android:src="@drawable/head_default_local" />
+
+                    <LinearLayout
+                        android:id="@+id/revise_user_info_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/roundedImageView"
+                        android:layout_toRightOf="@+id/roundedImageView"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_revise_info" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/revise_info"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/user_name"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="5dp" >
+
+                    <LinearLayout
+                        android:id="@+id/layout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/fans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fans"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/fensishu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="55"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tiezi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_toRightOf="@+id/layout1"
+                        android:text="@string/post"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tiezi"
+                        android:text="100"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/follow_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:layout_toLeftOf="@+id/layout1"
+                        android:text="200"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/follow_count"
+                        android:text="@string/follower"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/user_resume"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_sign"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/medium_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="8dp" >
+
+                    <itstudio.instructor.ui.QQListView
+                        android:id="@+id/xlist_user_info"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:cacheColorHint="#00000000"
+                        android:choiceMode="singleChoice"
+                        android:divider="@drawable/listview_separator"
+                        android:drawSelectorOnTop="true"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:listSelector="#00000000"
+                        android:scrollbars="none" />
+                </LinearLayout>
+            </LinearLayout>
+        </itstudio.instructor.widget.PullScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/blue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="0.0px" >
+
+        <LinearLayout
+            android:id="@+id/user_info_back_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:background="@drawable/arrow_back"
+                android:gravity="center"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="6.0dip"
+                android:singleLine="true"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text_size" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/user_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_text_size" />
+
+        
+
+    </RelativeLayout>
+
+</FrameLayout>

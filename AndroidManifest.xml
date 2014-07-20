@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="itstudio.app"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="14" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="itstudio.instructor.config.MyApplication"
+        android:allowBackup="true"
+        android:configChanges="orientation|keyboardHidden"
+        android:icon="@drawable/icon_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@*android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="itstudio.instructor.ui.WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="itstudio.instructor.ui.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="itstudio.instructor.ui.GuideActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="me.storm.ninegag.view.swipeback.ImageViewActivity"
+            android:theme="@style/TranslucentTheme" >
+        </activity>
+        <activity android:name="itstudio.instructor.image.local.localImageFirstActivity" >
+        </activity>
+        <activity android:name="itstudio.instructor.image.local.localImageSecondActivity" >
+        </activity>
+        <activity android:name="itstudio.instructor.ui.SendNewsActivity" >
+        </activity>
+        <activity android:name="itstudio.instructor.ui.UpdateActivity" >
+        </activity>
+        <activity android:name="itstudio.instructor.ui.MainReviseInfoActivity" >
+        </activity>
+        <activity android:name="itstudio.instructor.ui.MainUserInfoActivity" >
+        </activity>
+        <activity android:name="itstudio.instructor.fragment.FragmentInstructorDetail" >
+        </activity>
+        <activity
+            android:name="itstudio.instructor.ui.NewsDetailActivity"
+            android:theme="@style/TranslucentTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+
+        <service android:name="itstudio.instructor.service.DownloadService" >
+        </service>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+</manifest>

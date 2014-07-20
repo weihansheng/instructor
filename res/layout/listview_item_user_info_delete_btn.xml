@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+      <Button 
+        android:id="@+id/id_item_btn"
+        android:layout_width="100dp"
+        android:singleLine="true"
+        android:layout_height="80dp"
+        android:text="删除"
+      	android:background="@drawable/delete_btn_selector"
+      	android:textColor="#ffffff"
+      	android:paddingLeft="15dp"
+      	android:paddingRight="15dp"
+      	
+        />
+
+</LinearLayout>

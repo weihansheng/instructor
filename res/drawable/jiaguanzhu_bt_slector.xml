@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<selector 
+    xmlns:android="http://schemas.android.com/apk/res/android"> 
+   <!--  <item
+        android:state_pressed="true"> 
+        <shape> 
+            渐变 
+            <gradient 
+                android:startColor="#40a3ff" 
+                android:endColor="#40a3ff" 
+                android:type="radial" 
+                android:gradientRadius="50"/> 
+            
+            圆角 
+            <corners 
+                android:radius="5dp"/> 
+            <padding 
+                android:left="10dp" 
+                android:top="5dp" 
+                android:right="10dp" 
+                android:bottom="5dp"/> 
+        </shape> 
+    </item>  -->
+    <item 
+        android:state_selected="true">
+        <shape> 
+            渐变 
+            <gradient 
+                android:startColor="#40a3ff" 
+                android:endColor="#40a3ff" 
+                android:type="radial" 
+                android:gradientRadius="50"/> 
+                 描边 
+            <stroke 
+                android:width="1dp" 
+                android:color="#40a3ff" 
+                android:dashGap="3dp"/>
+            
+            圆角 
+            <corners 
+                android:radius="5dp"/> 
+            <padding 
+                android:left="10dp" 
+                android:top="5dp" 
+                android:right="10dp" 
+                android:bottom="5dp"/> 
+        </shape> 
+    </item>
+    <!-- <item 
+        android:state_focused="true">
+        <shape> 
+            渐变 
+            <gradient 
+                android:startColor="@color/white" 
+                android:endColor="@color/white" 
+                android:type="radial" 
+                android:gradientRadius="50"/> 
+                 描边 
+            <stroke 
+                android:width="1dp" 
+                android:color="#40a3ff" 
+                android:dashGap="3dp"/>
+            
+            圆角 
+            <corners 
+                android:radius="5dp"/> 
+            <padding 
+                android:left="10dp" 
+                android:top="5dp" 
+                android:right="10dp" 
+                android:bottom="5dp"/> 
+        </shape> 
+    </item>
+    <item android:state_enabled="true">
+        <shape> 
+            描边 
+            <stroke 
+                android:width="1dp" 
+                android:color="#40a3ff" 
+                android:dashGap="3dp"/>
+           <gradient 
+                android:startColor="#ffffff" 
+                android:endColor="#ffffff" 
+                android:type="radial" 
+                android:gradientRadius="50"/> 
+            <corners 
+                android:topRightRadius="5dp" 
+                android:bottomLeftRadius="5dp" 
+                android:topLeftRadius="5dp" 
+                android:bottomRightRadius="5dp" 
+            /> 
+            <padding 
+                android:left="10dp" 
+                android:top="5dp" 
+                android:right="10dp" 
+                android:bottom="5dp"/> 
+        </shape> 
+    </item>
+    <item
+        android:state_pressed="false"> 
+        <shape> 
+            <stroke 
+                android:width="1dp" 
+                android:color="#40a3ff" 
+                android:dashGap="3dp"/>
+            渐变 
+            <gradient 
+                android:startColor="@color/white" 
+                android:endColor="@color/white" 
+                android:type="radial" 
+                android:gradientRadius="50"/> 
+            
+            圆角 
+            <corners 
+                android:radius="5dp"/> 
+            <padding 
+                android:left="10dp" 
+                android:top="5dp" 
+                android:right="10dp" 
+                android:bottom="5dp"/> 
+        </shape> 
+    </item>  -->
+    
+    <item
+        android:state_selected="false"> 
+        <shape> 
+            <stroke 
+                android:width="1dp" 
+                android:color="#40a3ff" 
+                android:dashGap="3dp"/>
+            渐变 
+            <gradient 
+                android:startColor="#00000000" 
+                android:endColor="#00000000" 
+                android:type="radial" 
+                android:gradientRadius="50"/> 
+            
+            圆角 
+            <corners 
+                android:radius="5dp"/> 
+            <padding 
+                android:left="10dp" 
+                android:top="5dp" 
+                android:right="10dp" 
+                android:bottom="5dp"/> 
+        </shape> 
+    </item>
+
+</selector> 
