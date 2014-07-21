@@ -1,19 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hsv"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
-      <Button 
-        android:id="@+id/id_item_btn"
-        android:layout_width="100dp"
-        android:singleLine="true"
-        android:layout_height="80dp"
-        android:text="删除"
-      	android:background="@drawable/delete_btn_selector"
-      	android:textColor="#ffffff"
-      	android:paddingLeft="15dp"
-      	android:paddingRight="15dp"
-      	
-        />
+    android:layout_height="85dp"
+    android:focusable="false"
+    android:scrollbars="none" >
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            >
+
+            <TextView
+                android:id="@+id/list_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/large_text_size" />
+
+            <TextView
+                android:id="@+id/list_item_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="content"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/medium_text_size" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/list_item_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="time"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/small_text_size" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_action"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="2dip"
+                android:background="@drawable/delete_btn_selector"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:text="删除" />
+        </LinearLayout>
+    </LinearLayout>
+
+</HorizontalScrollView>

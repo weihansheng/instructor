@@ -58,8 +58,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignTop="@+id/roundedImageView"
-                        android:layout_toRightOf="@+id/roundedImageView"
                         android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/roundedImageView"
                         android:gravity="center_vertical"
                         android:orientation="horizontal" >
 
@@ -74,7 +74,6 @@
                             android:text="@string/revise_info"
                             android:textColor="@color/black" />
                     </LinearLayout>
-
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -90,8 +89,6 @@
                         android:text="@string/user_name"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
-
-                    
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -184,20 +181,14 @@
                     android:orientation="vertical"
                     android:paddingBottom="8dp" >
 
-                    <itstudio.instructor.ui.QQListView
-                        android:id="@+id/xlist_user_info"
-                        android:layout_width="fill_parent"
+                    <itstudio.instructor.xlistview.XListView
+                        android:id="@+id/listviewTest"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:cacheColorHint="#00000000"
-                        android:choiceMode="singleChoice"
                         android:divider="@drawable/listview_separator"
-                        android:drawSelectorOnTop="true"
-                        android:focusable="false"
-                        android:gravity="center"
-                        android:listSelector="#00000000"
-                        android:scrollbars="none" />
+                        android:layout_marginLeft="10dp"
+                       
+                         />
                 </LinearLayout>
             </LinearLayout>
         </itstudio.instructor.widget.PullScrollView>
@@ -248,9 +239,6 @@
             android:text="@string/user_name"
             android:textColor="@color/white"
             android:textSize="@dimen/large_text_size" />
-
-        
-
     </RelativeLayout>
 
 </FrameLayout>
