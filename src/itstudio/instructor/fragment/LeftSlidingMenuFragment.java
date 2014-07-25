@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import itstudio.instructor.config.Constants;
+import itstudio.instructor.ui.LoginActivity;
 import itstudio.instructor.ui.MainActivity;
 import itstudio.instructor.ui.MainUserInfoActivity;
 import itstudio.instructor.widget.CustomScrollView;
@@ -131,6 +132,7 @@ public class LeftSlidingMenuFragment extends Fragment {
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			Fragment newContent = null;
+			Intent intent=new Intent();
 			switch (v.getId()) {
 
 			case R.id.toolbox_layout_home:
@@ -174,7 +176,10 @@ public class LeftSlidingMenuFragment extends Fragment {
 				break;
 
 			case R.id.toolbox_layout_message:
-				newContent = FragmentDrafts.getInstance(getActivity());
+				newContent = FragmentMessage.getInstance(getActivity());
+				/*
+				intent.setClass(getActivity(), FragmentMessage.class);
+	    		startActivity(intent);*/
 				titleTv.setText(R.string.collect);
 				currentView.setSelected(false);
 				currentView = toolboxMessage;
@@ -196,7 +201,7 @@ public class LeftSlidingMenuFragment extends Fragment {
 				break;
 			case R.id.headImageView:
 				if (!Constants.isLogin) {
-					Intent intent = new Intent();
+					//intent.setClass(getActivity(), LoginActivity.class);
 					intent.setClass(getActivity(), MainUserInfoActivity.class);
 					startActivity(intent);
 

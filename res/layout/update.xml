@@ -2,20 +2,136 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/white"
+    android:background="@color/bj"
     android:orientation="vertical" >
 
-    
-    <Button
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/blue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="0.0px" >
+
+        <LinearLayout
+            android:id="@+id/setting_back_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:background="@drawable/arrow_back"
+                android:gravity="center"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="6.0dip"
+                android:singleLine="true"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text_size" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/about"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/gray" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="@dimen/large_text_size"
+                android:textColor="@color/light_black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/version"
+                android:textSize="@dimen/medium_text_size"
+                android:textColor="@color/light_black" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/check_update"
         android:layout_width="match_parent"
-        android:layout_marginTop="10dip"
         android:layout_height="50dip"
-        android:background="@drawable/start_btn_bg"
-        android:layout_marginBottom="40dip"
-        android:layout_marginLeft="20dip"
-        android:layout_marginRight="20dip"
-        android:text="@string/update" />
+        android:background="@drawable/fragment_setting_selector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dip" >
 
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/setting_textview"
+            android:text="@string/update" />
+
+        <TextView
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView1"
+            android:layout_alignParentRight="true"
+            android:text="@string/current_version"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/medium_text_size" />
+    </RelativeLayout>
+
+    <include layout="@layout/divider_line" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/fragment_setting_selector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dip" >
+
+        <TextView
+            style="@style/setting_textview"
+            android:text="@string/develop_team" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/team"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/medium_text_size" />
+    </RelativeLayout>
+
+    <include layout="@layout/divider_line" />
+
+    
 
 </LinearLayout>

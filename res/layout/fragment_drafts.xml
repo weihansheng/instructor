@@ -2,14 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical" >
-    
-    
-     <TextView
-         android:id="@+id/collect"
+
+    <itstudio.instructor.xlistview.XListView
+        android:id="@+id/listview_drafts"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:choiceMode="singleChoice"
+        android:divider="@drawable/listview_separator"
+        android:drawSelectorOnTop="true"
+        android:focusable="false"
         android:gravity="center"
-        android:text="@string/send"/>
+        android:listSelector="#00000000"
+        android:scrollbars="none" />
 
 </LinearLayout>

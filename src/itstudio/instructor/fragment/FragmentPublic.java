@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import itstudio.app.R;
-import itstudio.instructor.adapter.InstructorDetailAdapter;
+import itstudio.instructor.adapter.InstructorListViewAdapter;
 import itstudio.instructor.xlistview.XListView;
 import itstudio.instructor.xlistview.XListView.IXListViewListener;
 import android.content.Context;
@@ -65,7 +65,7 @@ public class FragmentPublic extends Fragment  implements IXListViewListener,OnCl
 			hashMap.put("instructor_jianjie", "爱吃是福，爱吃就是我的最大的优点。");
 			data.add(hashMap);
 		}
-		InstructorDetailAdapter listAdapter = new InstructorDetailAdapter(getActivity(), data,
+		InstructorListViewAdapter listAdapter = new InstructorListViewAdapter(getActivity(), data,
 				R.layout.fragment_instructor_item_list,
 				new String[] { "user_image","instructor_name", "instructor_jianjie"
 						 }, new int[] {R.id.user_image, R.id.instructor_name,

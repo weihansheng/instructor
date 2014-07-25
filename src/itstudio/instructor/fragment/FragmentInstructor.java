@@ -1,7 +1,7 @@
 package itstudio.instructor.fragment;
 
 import itstudio.app.R;
-import itstudio.instructor.adapter.InstructorDetailAdapter;
+import itstudio.instructor.adapter.InstructorListViewAdapter;
 import itstudio.instructor.xlistview.XListView;
 import itstudio.instructor.xlistview.XListView.IXListViewListener;
 
@@ -37,8 +37,7 @@ public class FragmentInstructor extends Fragment implements IXListViewListener,
 	View parentView;
 	private XListView instructor_listview;
 	private List<HashMap<String, Object>> data = new ArrayList<HashMap<String, Object>>();
-	private InstructorDetailAdapter listAdapter;
-	 
+	private InstructorListViewAdapter listAdapter;
 
 	private static FragmentInstructor singleton;
 
@@ -79,7 +78,7 @@ public class FragmentInstructor extends Fragment implements IXListViewListener,
 			hashMap.put("instructor_jianjie", "爱吃是福，爱吃就是我的最大的优点。");
 			data.add(hashMap);
 		}
-		listAdapter = new InstructorDetailAdapter(getActivity(), data,
+		listAdapter = new InstructorListViewAdapter(getActivity(), data,
 				R.layout.fragment_instructor_item_list,
 				new String[] { "user_image", "instructor_name",
 						"instructor_jianjie" }, new int[] { R.id.user_image,
@@ -96,7 +95,7 @@ public class FragmentInstructor extends Fragment implements IXListViewListener,
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
 				Intent intent = new Intent();
-				System.out.println("点击了listview");
+				System.out.println("点击了instructor的listview");
 				intent.setClass(getActivity(), FragmentInstructorDetail.class);
 				startActivity(intent);
 

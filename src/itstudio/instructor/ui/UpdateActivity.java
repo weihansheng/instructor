@@ -21,13 +21,16 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.view.View;
-import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class UpdateActivity extends Activity {
 	
 	private int currentVersionCode;
 	private DownloadBinder binder;
-	private Button btn_check;
+	private View back_layout;
+	private View check_view;
+	private TextView progress_text;
 	private boolean isBinded;
 	private CustomDialog.Builder ibuilder;
 	Dialog dialog = null;
@@ -44,8 +47,17 @@ public class UpdateActivity extends Activity {
 		setContentView(R.layout.update);
 		
 		app = (MyApplication) getApplication();
-		btn_check = (Button) findViewById(R.id.check_update);
-		btn_check.setOnClickListener(new android.view.View.OnClickListener() {
+		progress_text=(TextView) findViewById(R.id.progress);
+		check_view = (View) findViewById(R.id.check_update);
+		back_layout=(View) findViewById(R.id.setting_back_layout);
+		back_layout.setOnClickListener(new android.view.View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
+		check_view.setOnClickListener(new android.view.View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -84,7 +96,7 @@ public class UpdateActivity extends Activity {
 			stopService(it);
 		}
 		isBinded = false;
-		btn_check.setText(getResources().getString(R.string.update));
+		progress_text.setText(getResources().getString(R.string.update));
 		
 	}
 	private void showUpdateDialog() {
@@ -210,7 +222,7 @@ public class UpdateActivity extends Activity {
 
 	private Handler mHandler = new Handler() {
 		public void handleMessage(android.os.Message msg) {
-			btn_check.setText("当前进度 ： " + msg.what + "%"+"取消");
+			progress_text.setText("当前进度 ： " + msg.what + "%"+"取消");
 
 		};
 	};

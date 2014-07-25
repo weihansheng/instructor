@@ -233,6 +233,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/save_btn_selector"
-        android:text="保存" />
+        android:text="@string/save" 
+        android:textColor="@color/white"/>
 
 </LinearLayout>

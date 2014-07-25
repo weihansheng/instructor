@@ -1,30 +1,30 @@
 package itstudio.instructor.adapter;
 
 import itstudio.app.R;
+import itstudio.instructor.ui.MainUserInfoActivity;
+import itstudio.instructor.ui.NewsDetailActivity;
 
 import java.util.List;
 import java.util.Map;
 
-
 import android.content.Context;
+import android.content.Intent;
+import android.sax.StartElementListener;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.BaseAdapter;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ListViewSlidingBtnAdapter extends BaseAdapter
+public class UserInfoListViewAdapter extends BaseAdapter
 		 {
-	/**
-	 * 这个用来填充list
-	 */
-	private List<Integer> colors;
+	
 	/**
 	 * context上下文,用来获得convertView
 	 */
@@ -58,7 +58,7 @@ public class ListViewSlidingBtnAdapter extends BaseAdapter
 	 * @param screenWidth
 	 */
 
-	public ListViewSlidingBtnAdapter(Context context,
+	public UserInfoListViewAdapter(Context context,
 			List<? extends Map<String, ?>> data, int resource, String[] from,
 			int[] to, int screenWidth) {
 
@@ -147,7 +147,7 @@ public class ListViewSlidingBtnAdapter extends BaseAdapter
 						"删除了" + holder.tvTitle.getText().toString(), 0).show();
 				mData.remove(position);
 				System.out.println(position);
-				ListViewSlidingBtnAdapter.this.notifyDataSetChanged();
+				UserInfoListViewAdapter.this.notifyDataSetChanged();
 
 			}
 		});
@@ -171,7 +171,10 @@ public class ListViewSlidingBtnAdapter extends BaseAdapter
 					// 获得操作区域的长度
 					int actionW = viewHolder.action.getWidth();
 					if (Math.abs(upX - downX) < 10) {
-						Toast.makeText(mContext, "点击了listview", 0).show();
+						//Toast.makeText(mContext, "点击了listview", 0).show();
+						Intent intent =new Intent();
+						intent.setClass(mContext, NewsDetailActivity.class);
+						MainUserInfoActivity.mactivity.startActivity(intent);
 						/*
 						 * viewHolder.hSView.scrollTo(0, 0);
 						 * viewHolder.hSView.smoothScrollTo(0, 0);

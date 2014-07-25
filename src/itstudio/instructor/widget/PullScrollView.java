@@ -11,6 +11,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ScrollView;
 
 public class PullScrollView extends ScrollView{
+	
 
 	 /** 阻尼系数,越小阻力就越大. */
     private static final float SCROLL_RATIO = 0.5f;
@@ -53,6 +54,7 @@ public class PullScrollView extends ScrollView{
 
     /** 状态变化时的监听器. */
     private OnTurnListener mOnTurnListener;
+    private ScrollViewListener mScrollViewListener;
 
     private enum State {
         /**顶部*/
@@ -122,14 +124,7 @@ public class PullScrollView extends ScrollView{
         }
     }
 
-    @Override
-    protected void onScrollChanged(int l, int t, int oldl, int oldt) {
-        super.onScrollChanged(l, t, oldl, oldt);
-
-        if (getScrollY() == 0) {
-            isTop = true;
-        }
-    }
+   
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
@@ -293,5 +288,31 @@ public class PullScrollView extends ScrollView{
          * 翻转回调方法
          */
         public void onTurn();
+
+		void onScrollChanged(PullScrollView scrollView, int x, int y, int oldx,
+				int oldy);
     }
+    //解决  listview可以上拉加载更多，但是嵌套到scrollview中上拉没反应 
+  
+    public void setScrollViewListener(ScrollViewListener scrollViewListener) {
+    	mScrollViewListener = scrollViewListener;
+    }
+    public interface ScrollViewListener {
+        void onScrollChanged(PullScrollView scrollView, 
+                             int x, int y, int oldx, int oldy);
+    }
+    @Override
+    protected void onScrollChanged(int l, int t, int oldl, int oldt) {
+        super.onScrollChanged(l, t, oldl, oldt);
+        if (mScrollViewListener != null) {
+        	mScrollViewListener.onScrollChanged(this, l, t, oldl, oldt);
+        }
+
+        if (getScrollY() == 0) {
+            isTop = true;
+        }
+    }
+   
+  
+   
 }

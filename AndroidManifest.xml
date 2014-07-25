@@ -54,11 +54,25 @@
         </activity>
         <activity android:name="itstudio.instructor.ui.UpdateActivity" >
         </activity>
+        <activity android:name="itstudio.instructor.ui.SettingFeedBackActivity" >
+        </activity>
         <activity android:name="itstudio.instructor.ui.MainReviseInfoActivity" >
         </activity>
         <activity android:name="itstudio.instructor.ui.MainUserInfoActivity" >
         </activity>
+        <activity android:name="itstudio.instructor.ui.DraftsEditActivity" >
+        </activity>
+        <activity android:name="itstudio.instructor.ui.LoginActivity" >
+        </activity>
+        <activity android:name="itstudio.instructor.ui.MyFollowActivity" >
+        </activity>
+        <activity android:name="itstudio.instructor.ui.MyFansActivity" >
+        </activity>
+        <activity android:name="itstudio.instructor.ui.MyPostActivity" >
+        </activity>
         <activity android:name="itstudio.instructor.fragment.FragmentInstructorDetail" >
+        </activity>
+        <activity android:name="itstudio.instructor.fragment.FragmentInstructor" >
         </activity>
         <activity
             android:name="itstudio.instructor.ui.NewsDetailActivity"

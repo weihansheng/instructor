@@ -1,6 +1,7 @@
 package itstudio.instructor.fragment;
 
 import itstudio.app.R;
+import itstudio.instructor.ui.NewsDetailActivity;
 import itstudio.instructor.widget.PullScrollView;
 import itstudio.instructor.xlistview.XListView;
 import itstudio.instructor.xlistview.XListView.IXListViewListener;
@@ -10,6 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -24,14 +26,12 @@ import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
 public class FragmentInstructorDetail extends Activity implements
 		IXListViewListener, PullScrollView.OnTurnListener {
 	private XListView mListView;
 	private SimpleAdapter listAdapter;
 	private List<HashMap<String, String>> data = new ArrayList<HashMap<String, String>>();
-	private Handler mHandler;
 	private PullScrollView mScrollView;
 	private ImageView mHeadImg;
 	private LinearLayout back_layout;
@@ -77,15 +77,13 @@ public class FragmentInstructorDetail extends Activity implements
 			case R.id.bt_jiaguanzhu:
 				if (bt_follow.isSelected()) {
 					bt_follow.setSelected(false);
-					bt_follow.setTextColor(Color.BLACK);
 					bt_follow.setText("加关注");
-					
-				}else {
+
+				} else {
 					bt_follow.setSelected(true);
 					bt_follow.setText("已关注");
-					bt_follow.setTextColor(Color.WHITE);
 				}
-				
+
 				break;
 
 			default:
@@ -124,8 +122,14 @@ public class FragmentInstructorDetail extends Activity implements
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
-				Toast.makeText(getApplicationContext(), "" + arg2,
-						Toast.LENGTH_SHORT).show();
+				/*
+				 * Toast.makeText(getApplicationContext(), "" + arg2,
+				 * Toast.LENGTH_SHORT).show();
+				 */
+				Intent intent = new Intent();
+				intent.setClass(getApplicationContext(),
+						NewsDetailActivity.class);
+				startActivity(intent);
 			}
 		});
 		setListViewHeightBasedOnChildren(mListView);// 解决listview与scrollview冲突问题
@@ -187,6 +191,13 @@ public class FragmentInstructorDetail extends Activity implements
 
 	@Override
 	public void onTurn() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onScrollChanged(PullScrollView scrollView, int x, int y,
+			int oldx, int oldy) {
 		// TODO Auto-generated method stub
 
 	}

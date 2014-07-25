@@ -3,19 +3,21 @@
 
     <string name="app_name">导员在线</string>
     <string name="empty" />
-    
-    <!--  test_data -->
+
+    <!-- test_data -->
     <string name="wait_none">页面正在努力开发中....</string>
-    
-    <!--  login -->
+
+    <!-- login -->
     <string name="start">马上体验</string>
     <string name="account">账号</string>
+    <string name="account_hint">工号、学号、公众号</string>
     <string name="psw">密码</string>
+    <string name="psw_hint">初始密码为身份证后六位</string>
     <string name="register">注册</string>
     <string name="loss_psw">忘记密码</string>
     <string name="login_error">账号或者密码错误</string>
-    
-   	<!--  left_fragment -->
+
+    <!-- left_fragment -->
     <string name="IEC">IEC</string>
     <string name="login">登录</string>
     <string name="login_hint">点击登录</string>
@@ -27,20 +29,21 @@
     <string name="drafts">草   稿</string>
     <string name="message">消   息</string>
     <string name="edit">编   辑</string>
-    
-    <!--  setting -->
+
+    <!-- setting -->
     <string name="setting">设   置</string>
     <string name="logout">退出</string>
     <string name="update">检测更新</string>
     <string name="caleanCache">清除缓存</string>
-   	<!--  xListview -->
+    <string name="share">分 享</string>
+    <!-- xListview -->
     <string name="xlistview_header_hint_normal">下拉刷新</string>
     <string name="xlistview_header_hint_ready">松开刷新数据</string>
     <string name="xlistview_header_hint_loading">正在加载...</string>
     <string name="xlistview_header_last_time">上次更新时间：</string>
     <string name="xlistview_footer_hint_normal">查看更多</string>
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
-    
+
     <!-- 常用资源 -->
     <string name="about">关于</string>
     <string name="home">首页</string>
@@ -48,7 +51,7 @@
     <string name="back">返回</string>
     <string name="save">保存</string>
     <string name="submit">提交</string>
-    
+
     <!-- 发布页面资源 -->
     <string name="text_left">还可以输入100字</string>
     <string name="already_select">已选0张</string>
@@ -66,7 +69,7 @@
     <string name="photo">照片</string>
     <string name="save_drafts">存草稿</string>
     <string name="select_album">选择相册</string>
-    
+
     <!-- dialog -->
     <string name="prompt">提示</string>
     <string name="exit_app">你确定要退出应用吗?</string>
@@ -75,14 +78,24 @@
     <string name="main_body">正文</string>
     <string name="update_message_test">当前版本1.0 发现新版本2.0 是否更新</string>
     <string name="content_test">&#160;&#160;&#160;&#160;考试一律在指定时间和考场内进行。 2. 学生应试时必须携带学生证,以备查对。非应试学生不得进入考场。 3. 学生应提前5分钟进入考场,服从监考教师安排,坐到指定的座位上。 4. 书包、书籍、笔记、纸张等一律不得带入考场。 5. 考试开始15分钟后不准再进入考场,逾时以旷考论。试题发出15分钟后,方可交卷离场。6. 学生答卷时不得互借文具、计算器、计算用图表和曲线。7. 考试中途不得离开考场(提前交卷者除外)。在考场上得急病、突发病不能坚持考试者,征得监考教师同意后,应立即赴校医院急诊就医(凭当日医疗证明到系教学主管部门申办重修或重考手续)</string>
-    
+
     <!-- setting -->
     <string name="sound_remind">声音提醒</string>
     <string name="shake_remind">震动提醒</string>
     <string name="push_notice">推送通知</string>
     <string name="opinion_feedback">意见反馈</string>
-     <!-- 个人信息页面资源 -->
+    <string name="opinion_clean">清除缓存</string>
+    <string name="opinion_feedback_hint">请输入反馈，我们将为您不断改进...</string>
+    <string name="exit">退出登录</string>
+    <string name="version">v1.1.1</string>
+    <string name="current_version">已是最新版本</string>
+    <string name="develop_team">开发团队</string>
+    <string name="team">大学生IT创新工作室</string>
+    <!-- 个人信息页面资源 -->
     <string name="user_name">百合花</string>
+    <string name="my_follow">我的关注</string>
+    <string name="my_post">我的帖子</string>
+    <string name="my_fans">我的粉丝</string>
     <string name="follow">加关注</string>
     <string name="fans">粉丝：</string>
     <string name="post">帖子：</string>
@@ -90,5 +103,7 @@
     <string name="user_resume">简介：</string>
     <string name="user_sign">我总告诫年轻人，在你事业失落的时候决不能读太多励志的书籍</string>
     <string name="revise_info">修改资料</string>
+     <string name="comment">评论</string>
+      <string name="replay">回复</string>
 
 </resources>

@@ -25,13 +25,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical" >
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp" >
+                 >
 
                 <TextView
                     android:id="@+id/instructor_name"
@@ -40,16 +42,15 @@
                     android:layout_centerVertical="true"
                     android:text="@string/user_name"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/medium_text_size" />
+                    android:textSize="@dimen/large_text_size" />
 
                 <Button
                     android:id="@+id/bt_jiaguanzhu1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
                     android:background="@drawable/jiaguanzhu_bt_slector"
-                    android:descendantFocusability="afterDescendants"
                     android:paddingBottom="4dp"
                     android:paddingTop="4dp"
                     android:text="@string/follow"
@@ -74,18 +75,14 @@
                     android:id="@+id/instructor_jianjie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:lines="2"
+                    android:singleLine="true"
+                    android:ellipsize="end"
                     android:text="@string/user_sign"
                     android:textColor="@color/light_black"
                     android:textSize="@dimen/small_text_size" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-    <ImageView 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/listview_separator"/>
+    
 
 </LinearLayout>

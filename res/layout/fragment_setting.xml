@@ -4,102 +4,154 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical" >
-    
-    <RelativeLayout 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/fragment_setting_selector"
         android:clickable="true"
-        android:layout_marginTop="1.6dip"
-        android:padding="10dip"
-        android:layout_width="match_parent"
         android:gravity="center_vertical"
-    	android:layout_height="wrap_content">
-        <TextView 
-            style="@style/setting_textview"
-    		android:text="@string/sound_remind"/>
-      	<itstudio.instructor.widget.UISwitchButton
-	        xmlns:switch="http://schemas.android.com/apk/res-auto"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        switch:bmHeight="3000dp"
-	        android:layout_alignParentRight="true"
-	        switch:bmWidth="50dp" />
-    </RelativeLayout>
-    <include layout="@layout/divider_line"/>
-    <RelativeLayout 
-        android:background="@drawable/fragment_setting_selector"
-        android:clickable="true"
-        android:padding="10dip"
-        android:layout_width="match_parent"
-        android:gravity="center_vertical"
-    	android:layout_height="wrap_content">
-        <TextView 
-            style="@style/setting_textview"
-    		android:text="@string/shake_remind"/>
-      	<itstudio.instructor.widget.UISwitchButton
-	        xmlns:switch="http://schemas.android.com/apk/res-auto"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        switch:bmHeight="3000dp"
-	        android:layout_alignParentRight="true"
-	        switch:bmWidth="50dp" />
-    </RelativeLayout>
-    <include layout="@layout/divider_line"/>
-    <RelativeLayout 
-        android:background="@drawable/fragment_setting_selector"
-        android:clickable="true"
-        android:padding="10dip"
-        android:layout_width="match_parent"
-        android:gravity="center_vertical"
-    	android:layout_height="wrap_content">
+        android:padding="10dip" >
+
         <TextView
             style="@style/setting_textview"
-    		android:text="@string/push_notice"/>
-      	<itstudio.instructor.widget.UISwitchButton
-	        xmlns:switch="http://schemas.android.com/apk/res-auto"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        switch:bmHeight="3000dp"
-	        android:layout_alignParentRight="true"
-	        switch:bmWidth="50dp" />
+            android:text="@string/push_notice" />
+
+        <itstudio.instructor.widget.UISwitchButton
+            xmlns:switch="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            switch:bmHeight="3000dp"
+            switch:bmWidth="50dp" />
     </RelativeLayout>
-    <include layout="@layout/divider_line"/>
-    <RelativeLayout 
+
+    <include layout="@layout/divider_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1.6dip"
         android:background="@drawable/fragment_setting_selector"
         android:clickable="true"
-        android:padding="10dip"
-        android:layout_width="match_parent"
         android:gravity="center_vertical"
-    	android:layout_height="50dip">
-        <TextView 
-           	style="@style/setting_textview"
-    		android:text="@string/opinion_feedback"/>
-        <ImageView 
-            android:layout_alignParentRight="true"
+        android:padding="10dip" >
+
+        <TextView
+            style="@style/setting_textview"
+            android:text="@string/sound_remind" />
+
+        <itstudio.instructor.widget.UISwitchButton
+            xmlns:switch="http://schemas.android.com/apk/res-auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/arrow_more"
-            />
+            android:layout_alignParentRight="true"
+            switch:bmHeight="3000dp"
+            switch:bmWidth="50dp" />
     </RelativeLayout>
-    <include layout="@layout/divider_line"/>
+
+    <include layout="@layout/divider_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fragment_setting_selector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dip" >
+
+        <TextView
+            style="@style/setting_textview"
+            android:text="@string/shake_remind" />
+
+        <itstudio.instructor.widget.UISwitchButton
+            xmlns:switch="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            switch:bmHeight="3000dp"
+            switch:bmWidth="50dp" />
+    </RelativeLayout>
+
+    <include layout="@layout/divider_line" />
+
+    <RelativeLayout
+        android:id="@+id/feedbackview"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/fragment_setting_selector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dip" >
+
+        <TextView
+            style="@style/setting_textview"
+            android:text="@string/opinion_feedback" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrow_more" />
+    </RelativeLayout>
+
+    <include layout="@layout/divider_line" />
+
+    <RelativeLayout
+        android:id="@+id/cleanview"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/fragment_setting_selector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dip" >
+
+        <TextView
+            style="@style/setting_textview"
+            android:text="@string/opinion_clean" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrow_more" />
+    </RelativeLayout>
+
+    <include layout="@layout/divider_line" />
+
     <RelativeLayout
         android:id="@+id/about"
-        android:background="@drawable/fragment_setting_selector"
-        android:clickable="true" 
-        android:padding="10dip"
-        android:descendantFocusability="beforeDescendants"
         android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/fragment_setting_selector"
+        android:clickable="true"
+        android:descendantFocusability="beforeDescendants"
         android:gravity="center_vertical"
-    	android:layout_height="50dip">
-        <TextView 
-           	style="@style/setting_textview"
-           	android:layout_width="match_parent"
-           	android:text="@string/about"/>
-       	<ImageView 
-            android:layout_alignParentRight="true"
+        android:padding="10dip" >
+
+        <TextView
+            style="@style/setting_textview"
+            android:layout_width="match_parent"
+            android:text="@string/about" />
+
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/arrow_more"
-            />
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrow_more" />
     </RelativeLayout>
-	<include layout="@layout/divider_line"/>
+
+    <include layout="@layout/divider_line" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bt_exit_selector"
+        android:text="@string/exit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/large_text_size" />
+
 </LinearLayout>

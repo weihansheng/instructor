@@ -2,70 +2,91 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue" 
+    android:background="@color/blue"
     android:padding="0.0px" >
-<LinearLayout  
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical">
-  	<RelativeLayout 
-	    android:layout_width="match_parent"
-	    android:layout_height="@dimen/title_height"
-	    android:gravity="center_vertical"
-	    android:orientation="horizontal"
-	    android:background="@color/blue" 
-	    android:padding="0.0px" >
-		<ImageButton
-	        android:id="@+id/btn_back"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentLeft="true"
-	        android:layout_centerVertical="true"
-	        android:layout_marginLeft="6dip"
-	        android:layout_marginRight="6dip"
-	        android:gravity="center"
-	        android:background="@drawable/icon_arrow_back"
-	        android:includeFontPadding="false" />
-		        
-		<TextView
-	        android:layout_width="wrap_content"
-	        android:layout_height="match_parent"
-	        android:layout_centerInParent="true"
-	        android:ellipsize="end"
-	        android:gravity="center"
-	        android:singleLine="true"
-	        android:textSize="@dimen/large_text_size"
-	        android:textColor="@color/white"
-	        android:text="@string/select_album" />
-	</RelativeLayout>    
-    <itstudio.instructor.widget.StretchScrollView
-        android:id="@+id/scroll_view"
-        android:scrollbars="none"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dip"
-        android:fillViewport="true">
-		<LinearLayout 
-        	android:layout_width="match_parent"
-   			android:layout_height="wrap_content"
-   			android:orientation="vertical">
-  			<GridView
-		        android:id="@+id/main_grid"
-		        android:layout_width="match_parent"
-		        android:layout_height="match_parent"
-		        android:listSelector="@android:color/transparent"
-		        android:cacheColorHint="@android:color/transparent"
-		        android:stretchMode="columnWidth"
-		        android:horizontalSpacing="20dip"
-		        android:gravity="center"
-		        android:verticalSpacing="20dip"
-		        android:columnWidth="90dip"
-		        android:scrollbars="none"
-		        android:numColumns="2" >
-    		</GridView>
-	    </LinearLayout>
+        android:background="@color/white"
+        android:orientation="vertical" >
 
-    </itstudio.instructor.widget.StretchScrollView>
-</LinearLayout >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="@color/blue"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="0.0px" >
+
+            <LinearLayout
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:background="@drawable/arrow_back"
+                    android:gravity="center"
+                    android:includeFontPadding="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:paddingLeft="6.0dip"
+                    android:singleLine="true"
+                    android:text="@string/back"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/select_album"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_text_size" />
+        </RelativeLayout>
+
+        <itstudio.instructor.widget.StretchScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dip"
+            android:fillViewport="true"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <GridView
+                    android:id="@+id/main_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:columnWidth="90dip"
+                    android:gravity="center"
+                    android:horizontalSpacing="20dip"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="2"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="20dip" >
+                </GridView>
+            </LinearLayout>
+        </itstudio.instructor.widget.StretchScrollView>
+    </LinearLayout>
+
 </RelativeLayout>

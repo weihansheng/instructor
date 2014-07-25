@@ -18,7 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class InstructorDetailAdapter extends BaseAdapter {
+public class InstructorListViewAdapter extends BaseAdapter {
 	private class ViewHolder {
 		ImageView itemIcon;
 		TextView itemName;
@@ -48,7 +48,7 @@ public class InstructorDetailAdapter extends BaseAdapter {
 	 * @param to
 	 *            view中的id
 	 */
-	public InstructorDetailAdapter(Context context,
+	public InstructorListViewAdapter(Context context,
 			List<? extends Map<String, ?>> data, int resource, String[] from,
 			int[] to) {
 
@@ -107,7 +107,7 @@ public class InstructorDetailAdapter extends BaseAdapter {
 		holder.itemName.setText(data1.toString());
 		holder.itemJianjie.setText(data2.toString());
 		// 设置按钮事件
-		// 取消焦点
+		// 取消焦点   不然onItemClickListener无法响应
 		holder.itembtn.setFocusable(false);
 		holder.itembtn.setOnClickListener(new OnClickListener() {
 

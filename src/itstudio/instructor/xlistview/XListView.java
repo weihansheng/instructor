@@ -374,4 +374,14 @@ public class XListView extends ListView implements OnScrollListener {
 
 		public void onLoadMore();
 	}
+
+	/*@Override
+	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+		// TODO Auto-generated method stub
+		int expandSpec = MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE >> 2,  
+                MeasureSpec.AT_MOST);  
+        super.onMeasure(widthMeasureSpec, expandSpec);  
+		//super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+	}*/
+	
 }
