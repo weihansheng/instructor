@@ -2,20 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bj"
     android:orientation="vertical" >
-    
-    <itstudio.instructor.widget.PagerSlidingTabStrip
-        android:id="@+id/tabs_signup"
-        android:layout_width="match_parent"
-        android:layout_height="48dip"
-        android:background="@drawable/tab_bg"
-        android:textColor="@color/light_black"
-        android:textSize="@dimen/large_text_size" />
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pagers_signup"
-        android:layout_width="match_parent"
+    <itstudio.instructor.xlistview.XListView
+        android:id="@+id/listview_message"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white" />
+        android:cacheColorHint="#00000000"
+        android:choiceMode="singleChoice"
+        android:divider="@drawable/listview_separator"
+        android:drawSelectorOnTop="true"
+        android:focusable="false"
+        android:gravity="center"
+        android:listSelector="#00000000"
+        android:scrollbars="none" />
 
 </LinearLayout>

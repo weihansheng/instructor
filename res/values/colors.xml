@@ -15,8 +15,8 @@
    	<color name="white">#ffffff</color><!--白色 -->
    <!-- 	<color name="blue">#0093d6</color> 蓝色 -->
     <color name="black">#4e4e4e</color> <!--黑 -->
-    <color name="deep_black">#232228</color> <!--深黑 -->
-    <color name="light_black">#484949</color> <!--浅黑 -->
+    <color name="deep_black">#5A5A5A</color> <!--深黑 -->
+    <color name="light_black">#999999</color> <!--浅黑 -->
    	<color name="light_blue">#26aeec</color> <!--浅蓝色-->
     <color name="transparent">#00000000</color><!--透明  -->
     <color name="light_gray">#777f83</color> <!--浅灰色 -->

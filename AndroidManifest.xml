@@ -58,6 +58,8 @@
         </activity>
         <activity android:name="itstudio.instructor.ui.MainReviseInfoActivity" >
         </activity>
+         <activity android:name="itstudio.instructor.ui.MainStudentInfoActivity" >
+        </activity>
         <activity android:name="itstudio.instructor.ui.MainUserInfoActivity" >
         </activity>
         <activity android:name="itstudio.instructor.ui.DraftsEditActivity" >
@@ -72,7 +74,7 @@
         </activity>
         <activity android:name="itstudio.instructor.fragment.FragmentInstructorDetail" >
         </activity>
-        <activity android:name="itstudio.instructor.fragment.FragmentInstructor" >
+        <activity android:name="itstudio.instructor.fragment.FragmentMessageDetail" >
         </activity>
         <activity
             android:name="itstudio.instructor.ui.NewsDetailActivity"

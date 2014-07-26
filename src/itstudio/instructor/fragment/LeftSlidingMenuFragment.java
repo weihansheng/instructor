@@ -1,32 +1,22 @@
 package itstudio.instructor.fragment;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import itstudio.instructor.config.Constants;
 import itstudio.instructor.ui.LoginActivity;
 import itstudio.instructor.ui.MainActivity;
+import itstudio.instructor.ui.MainStudentInfoActivity;
 import itstudio.instructor.ui.MainUserInfoActivity;
 import itstudio.instructor.widget.CustomScrollView;
-import itstudio.instructor.widget.NoScrollGridView;
 import itstudio.app.R;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * @Description 侧滑左Fragment
@@ -69,6 +59,26 @@ public class LeftSlidingMenuFragment extends Fragment {
 		super.onCreate(savedInstanceState);
 
 	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		if (Constants.isLogin == true) {
+			nameTv.setText(Constants.account);
+			if(Constants.userID.equals("54")){
+				toolboxSend.setVisibility(View.GONE);
+				toolboxDrafts.setVisibility(View.GONE);
+				}else {
+					toolboxSend.setVisibility(View.VISIBLE);
+					toolboxDrafts.setVisibility(View.VISIBLE);
+				};
+		}else {
+			toolboxSend.setVisibility(View.VISIBLE);
+			toolboxDrafts.setVisibility(View.VISIBLE);
+		}
+		
+		
+	};
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -132,7 +142,7 @@ public class LeftSlidingMenuFragment extends Fragment {
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			Fragment newContent = null;
-			Intent intent=new Intent();
+			Intent intent = new Intent();
 			switch (v.getId()) {
 
 			case R.id.toolbox_layout_home:
@@ -178,9 +188,10 @@ public class LeftSlidingMenuFragment extends Fragment {
 			case R.id.toolbox_layout_message:
 				newContent = FragmentMessage.getInstance(getActivity());
 				/*
-				intent.setClass(getActivity(), FragmentMessage.class);
-	    		startActivity(intent);*/
-				titleTv.setText(R.string.collect);
+				 * intent.setClass(getActivity(), FragmentMessage.class);
+				 * startActivity(intent);
+				 */
+				titleTv.setText(R.string.message);
 				currentView.setSelected(false);
 				currentView = toolboxMessage;
 				currentView.setSelected(true);
@@ -201,9 +212,18 @@ public class LeftSlidingMenuFragment extends Fragment {
 				break;
 			case R.id.headImageView:
 				if (!Constants.isLogin) {
-					//intent.setClass(getActivity(), LoginActivity.class);
-					intent.setClass(getActivity(), MainUserInfoActivity.class);
+					intent.setClass(getActivity(), LoginActivity.class);
 					startActivity(intent);
+				} else {
+					if (Constants.userID.equals("12")) {
+						intent.setClass(getActivity(),
+								MainUserInfoActivity.class);
+						startActivity(intent);
+					} else {
+						intent.setClass(getActivity(),
+								MainStudentInfoActivity.class);
+						startActivity(intent);
+					}
 
 				}
 				break;

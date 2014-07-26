@@ -44,7 +44,7 @@
 	            android:text="美猴王驾到，显出原型来,美猴王驾到，显出原型来,美猴王驾到，显出原型来,美猴王驾到，显出原型来,"
 	            android:singleLine="true"
 	            android:textColor="@color/light_black"
-	            android:textSize="@dimen/small_text_size" />
+	            android:textSize="@dimen/medium_text_size" />
          </LinearLayout>
     </LinearLayout>
     <LinearLayout

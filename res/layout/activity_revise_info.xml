@@ -16,7 +16,8 @@
         <LinearLayout
             android:id="@+id/login_back_layout"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
             android:layout_centerVertical="true"
             android:orientation="horizontal" >
 
@@ -53,13 +54,14 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/layout_revise_user_image"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="10dp"
         android:orientation="horizontal" >
 
         <itstudio.instructor.widget.RoundedImageView
-            android:id="@+id/roundedImageView1"
+            android:id="@+id/revise_user_image"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:adjustViewBounds="true"
@@ -72,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@+id/roundedImageView1"
+            android:layout_toRightOf="@+id/revise_user_image"
             android:text="自定义头像"
             android:textColor="@color/black"
             android:textSize="@dimen/medium_text_size" />

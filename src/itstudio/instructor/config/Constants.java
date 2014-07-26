@@ -16,6 +16,7 @@ public class Constants {
 	public  static boolean isLogin = false;
 	public  static boolean isEditDrafts = false;
 	public  static String account = "";
+	public  static String userID = "";
 	
 
 }

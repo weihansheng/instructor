@@ -22,7 +22,8 @@
             <LinearLayout
                 android:id="@+id/content_back_layout"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
                 android:layout_centerVertical="true"
                 android:orientation="horizontal" >
 
@@ -88,7 +89,7 @@
                     android:layout_marginLeft="10dip"
                     android:singleLine="true"
                     android:text="关于考试的通知"
-                    android:textColor="@color/light_black"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/xlarge_text_size" />
 
                 <LinearLayout
@@ -137,7 +138,7 @@
                     android:paddingLeft="10dip"
                     android:paddingRight="10dip"
                     android:text="@string/content_test"
-                    android:textColor="@color/light_black"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/large_text_size" />
 
                 <ImageView
@@ -170,7 +171,7 @@
                     android:id="@+id/listview_comment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:divider="@null" />
+                    android:divider="@drawable/listview_separator" />
             </LinearLayout>
         </itstudio.instructor.widget.StretchScrollView>
     </LinearLayout>
@@ -189,6 +190,7 @@
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:hint="回复"
             android:background="@drawable/base_search_edittext_bg_focused" />
 
         <ImageView

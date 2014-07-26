@@ -30,12 +30,6 @@
     <string name="message">消   息</string>
     <string name="edit">编   辑</string>
 
-    <!-- setting -->
-    <string name="setting">设   置</string>
-    <string name="logout">退出</string>
-    <string name="update">检测更新</string>
-    <string name="caleanCache">清除缓存</string>
-    <string name="share">分 享</string>
     <!-- xListview -->
     <string name="xlistview_header_hint_normal">下拉刷新</string>
     <string name="xlistview_header_hint_ready">松开刷新数据</string>
@@ -77,6 +71,7 @@
     <string name="dismiss">隐藏</string>
     <string name="main_body">正文</string>
     <string name="update_message_test">当前版本1.0 发现新版本2.0 是否更新</string>
+    <string name="cleanCache_message">有5M的缓存，立即清除？</string>
     <string name="content_test">&#160;&#160;&#160;&#160;考试一律在指定时间和考场内进行。 2. 学生应试时必须携带学生证,以备查对。非应试学生不得进入考场。 3. 学生应提前5分钟进入考场,服从监考教师安排,坐到指定的座位上。 4. 书包、书籍、笔记、纸张等一律不得带入考场。 5. 考试开始15分钟后不准再进入考场,逾时以旷考论。试题发出15分钟后,方可交卷离场。6. 学生答卷时不得互借文具、计算器、计算用图表和曲线。7. 考试中途不得离开考场(提前交卷者除外)。在考场上得急病、突发病不能坚持考试者,征得监考教师同意后,应立即赴校医院急诊就医(凭当日医疗证明到系教学主管部门申办重修或重考手续)</string>
 
     <!-- setting -->
@@ -84,13 +79,19 @@
     <string name="shake_remind">震动提醒</string>
     <string name="push_notice">推送通知</string>
     <string name="opinion_feedback">意见反馈</string>
-    <string name="opinion_clean">清除缓存</string>
     <string name="opinion_feedback_hint">请输入反馈，我们将为您不断改进...</string>
     <string name="exit">退出登录</string>
+    <string name="exit_question">确定退出登录？</string>
     <string name="version">v1.1.1</string>
     <string name="current_version">已是最新版本</string>
     <string name="develop_team">开发团队</string>
     <string name="team">大学生IT创新工作室</string>
+    <!-- setting -->
+    <string name="setting">设   置</string>
+    <string name="logout">退出</string>
+    <string name="update">检测更新</string>
+    <string name="cleanCache">清除缓存</string>
+    <string name="share">分 享</string>
     <!-- 个人信息页面资源 -->
     <string name="user_name">百合花</string>
     <string name="my_follow">我的关注</string>
@@ -103,7 +104,8 @@
     <string name="user_resume">简介：</string>
     <string name="user_sign">我总告诫年轻人，在你事业失落的时候决不能读太多励志的书籍</string>
     <string name="revise_info">修改资料</string>
-     <string name="comment">评论</string>
-      <string name="replay">回复</string>
+    <string name="comment">评论：</string>
+    <string name="replay">回复</string>
+    <string name="detail">详情</string>
 
 </resources>

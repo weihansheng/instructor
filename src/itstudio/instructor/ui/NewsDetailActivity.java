@@ -96,7 +96,7 @@ public class NewsDetailActivity extends Activity {
 				}
 			});
 		}
-		// 填充adapter
+		// 填充评价listview
 		for (int i = 0; i < 10; i++) {
 			HashMap<String, Object> hashMap = new HashMap<String, Object>();
 			hashMap.put("commenter_image", R.drawable.pic_local_head5);
